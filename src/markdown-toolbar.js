@@ -2,7 +2,7 @@
 
 define([
     'jquery',
-    'utils/markdown_toolbar_controller'
+    './markdown-toolbar-controller'
 ], function($, MarkdownToolbarController) {
     var MarkdownToolbar = function($toolbar, $textarea, markdownPreview) {
         this.$toolbar = $toolbar;

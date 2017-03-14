@@ -2,7 +2,7 @@
 
 define([
     'jquery',
-    'utils/markdown_renderer'
+    './markdown-renderer'
 ], function($, MarkdownRenderer) {
     var MarkdownPreview = function($textarea, $previewArea) {
 
