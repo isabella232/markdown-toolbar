@@ -3,16 +3,16 @@
 
 (function(factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'commonmark'], factory);
+        define(['jquery'], factory);
     } else if (typeof exports === 'object') {
-        factory(require('jquery'), require('commonmark'));
+        factory(require('jquery'));
     } else {
-        factory(jQuery, commonmark);
+        factory(jQuery);
     }
-}(function($, commonmark) {
+}(function($) {
     var MarkdownRenderer = function() {
-        this.reader = new commonmark.Parser();
-        this.writer = new commonmark.HtmlRenderer();
+        //this.reader = new commonmark.Parser();
+        //this.writer = new commonmark.HtmlRenderer();
         if (typeof emoji !== 'undefined') {
             if (window.STATIC_URL) {
                 emoji.sheet_path = window.STATIC_URL +
@@ -32,8 +32,8 @@
      * - Turns URLs into <a> tags
      */
     MarkdownRenderer.prototype.render = function(text) {
-        var parsed = this.reader.parse(text);
-        var rendered = this.writer.render(parsed);
+        //var parsed = this.reader.parse(text);
+        //var rendered = this.writer.render(parsed);
         if (typeof window !== 'undefined' &&
             typeof window.linkifyHtml === 'function'
            ) {
